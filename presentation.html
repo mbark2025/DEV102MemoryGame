@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Présentation</title>
+
+<link rel="icon" type="image/png" href="logo_round.png">
+<link rel="stylesheet" href="stylePages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+.sommaire {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 25px;
+    border-radius: 15px;
+    background: rgba(255, 77, 77, 0.05);
+    box-shadow: 0 0 15px rgba(255,0,0,0.1);
+    margin: 20px 0;
+}
+
+.sommaire h2 {
+    text-align: center;
+    color: #ff4d4d;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 6px #ff9999;
+}
+
+.sommaire .section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 12px;
+    background: #ffe6e6;
+    color: #990000;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.sommaire .section:hover {
+    background: #ffcccc;
+    color: #ff1a1a;
+    transform: scale(1.02);
+    box-shadow: 0 0 10px #ff9999;
+}
+
+.sommaire .section .numero {
+    font-weight: bold;
+    font-size: 18px;
+    color: #ff4d4d;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html"><img src="logo.png" class="logo-nav"></a>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="apropos.html">À propos</a></li>
+<li><a href="presentation.html">Présentation</a></li>
+<li><a href="faq.html">FAQ</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="container">
+
+<h1>Présentation du projet DEV102 MemoryGame</h1>
+<p>
+    DEV102 MemoryGame est un jeu de mémoire conçu pour stimuler la concentration, 
+    l’observation et la réflexion.<br> Il propose un plateau interactif et des cartes 
+    à retrouver en un minimum de tentatives.<br> Ce projet illustre l’utilisation 
+    de Python et d’une interface graphique simple mais efficace.
+</p>
+
+<div class="sommaire">
+<h2>Sommaire de la présentation</h2>
+
+<a class="section" href="presentation.pdf#page=2" target="_blank"><span class="numero">I</span> Introduction</a>
+<a class="section" href="presentation.pdf#page=3" target="_blank"><span class="numero">II</span> Technologies utilisées</a>
+<a class="section" href="presentation.pdf#page=4" target="_blank"><span class="numero">III</span> Architecture du projet</a>
+<a class="section" href="presentation.pdf#page=5" target="_blank"><span class="numero">IV</span> Le plateau de jeu</a>
+<a class="section" href="presentation.pdf#page=6" target="_blank"><span class="numero">V</span> Les classes et modules utilisés</a>
+<a class="section" href="presentation.pdf#page=7" target="_blank"><span class="numero">VI</span> Programme principal</a>
+<a class="section" href="presentation.pdf#page=11" target="_blank"><span class="numero">VII</span> Perspectives d'amélioration</a>
+<a class="section" href="presentation.pdf#page=12" target="_blank"><span class="numero">VIII</span> Pourquoi l'utilisation de la POO</a>
+<a class="section" href="presentation.pdf#page=13" target="_blank"><span class="numero">IX</span> Démonstration finale</a>
+<a class="section" href="presentation.pdf#page=14" target="_blank"><span class="numero">X</span> Conclusion générale</a>
+</div>
+
+
+<div class="ppt-container" id="pdfContainer">
+    <iframe src="presentation.pdf"></iframe>
+</div>
+
+
+<div class="buttons-container">
+    <a href="presentation.pdf" download class="download-btn">⬇ Télécharger</a>
+    <button onclick="openFullscreen()" class="fullscreen-btn">⛶ Plein écran</button>
+</div>
+
+</div>
+
+<div class="social-bar">
+<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+<a href="https://www.instagram.com/lhnoud_m_qlf/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://www.linkedin.com/in/mbark-lahnoud/" target="_blank"><i class="fab fa-linkedin"></i></a>
+</div>
+
+<script>
+function openFullscreen() {
+    let elem = document.getElementById("pdfContainer");
+    if (elem.requestFullscreen) elem.requestFullscreen();
+    else if (elem.webkitRequestFullscreen) elem.webkitRequestFullscreen();
+    else if (elem.msRequestFullscreen) elem.msRequestFullscreen();
+}
+</script>
+
+</body>
+</html>
